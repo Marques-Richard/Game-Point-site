@@ -1,0 +1,178 @@
+/* ============================================================
+   RESPONSIVO — TABLET (até 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .banner { height: 440px; }
+  .banner-conteudo { max-width: 480px; }
+
+  .hero { padding: 80px 5% 60px; }
+  .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+
+  .grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+  .rodape-conteudo {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .rodape-col:first-child { grid-column: 1 / -1; }
+  .rodape-frase { max-width: 100%; }
+
+  .lojas-grid { gap: 20px; }
+  .loja-card iframe { height: 240px; }
+
+  /* Carrossel — 3 itens */
+  .carrossel-wrap { padding: 0 45px; }
+  .produto-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
+  }
+}
+
+/* ============================================================
+   RESPONSIVO — MOBILE (até 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* --- Menu --- */
+  .menu-btn { display: block; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  nav.aberto { display: flex; }
+  nav a {
+    padding: 14px 5%;
+    border-top: 1px solid var(--borda);
+    color: var(--txt);
+  }
+  nav a:hover { letter-spacing: 1px; }
+
+  /* --- Logo --- */
+  .logo img { height: 50px; }
+
+  /* --- Busca --- */
+  .busca-container { padding: 3px 10px; }
+  .busca-container input { width: 130px; font-size: 0.85rem; }
+
+  /* --- Botão tema --- */
+  .tema-btn { width: 38px; height: 38px; font-size: 1rem; }
+
+  /* --- Banner --- */
+  .banner { height: 380px; }
+  .banner-slide::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+  }
+  .banner-conteudo {
+    left: 5%;
+    right: 5%;
+    max-width: 100%;
+    text-align: left;
+  }
+  .banner-conteudo h2 { font-size: 1.5rem; }
+  .banner-conteudo p { font-size: 0.95rem; }
+  .banner-seta { display: none; }
+  .banner-indicadores { bottom: 16px; }
+
+  /* --- Hero --- */
+  .hero { padding: 60px 5% 50px; }
+  .hero-frase { font-size: 1rem; }
+  .botoes { flex-direction: column; align-items: center; }
+  .botoes .btn { width: 100%; max-width: 320px; text-align: center; }
+
+  /* --- Seções --- */
+  section, .secao-produtos { padding: 50px 5%; }
+
+  /* --- Grid --- */
+  .grid { grid-template-columns: 1fr; }
+
+  /* --- Carrossel — 2 itens --- */
+  .carrossel-wrap { padding: 0 38px; }
+  .grid-produtos { gap: 14px; padding: 10px 0 20px; }
+  .produto-item {
+    flex: 0 0 calc((100% - 14px) / 2);
+    max-width: calc((100% - 14px) / 2);
+  }
+  .seta { width: 36px; height: 36px; font-size: 1.4rem; }
+  .produto-item h3 { font-size: 0.9rem; min-height: 2.4em; }
+  .preco-promocional { font-size: 1.15rem; }
+  .preco-antigo { font-size: 0.78rem; }
+  .parcelamento { font-size: 0.78rem; }
+  .btn-comprar { font-size: 0.82rem; padding: 8px 18px; }
+
+  /* --- Filtros --- */
+  .filtros-marcas { gap: 8px; margin-bottom: 30px; }
+  .filtro-btn { padding: 6px 16px; font-size: 0.82rem; }
+
+  /* --- Contato --- */
+  .lojas-grid { grid-template-columns: 1fr; gap: 20px; }
+  .loja-card { padding: 18px; }
+  .loja-card iframe { height: 220px; }
+
+  /* --- História --- */
+  .historia-conteudo { flex-direction: column; gap: 25px; }
+  .historia-imagem { order: -1; }
+
+  /* --- Rodapé --- */
+  .rodape { padding: 45px 5% 0; }
+  .rodape-conteudo { grid-template-columns: 1fr; gap: 30px; }
+  .rodape-col:first-child { grid-column: auto; }
+}
+
+/* ============================================================
+   RESPONSIVO — MOBILE PEQUENO (até 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .logo img { height: 42px; }
+  .busca-container input { width: 100px; font-size: 0.8rem; }
+  .tema-btn { width: 34px; height: 34px; font-size: 0.95rem; }
+
+  .banner { height: 340px; }
+  .banner-conteudo h2 { font-size: 1.25rem; }
+  .banner-conteudo p { font-size: 0.88rem; }
+  .banner-tag { font-size: 0.7rem; padding: 5px 12px; }
+  .banner-dot { width: 10px; height: 10px; }
+
+  .hero { padding: 50px 5% 40px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-frase { font-size: 0.95rem; }
+  .nota { font-size: 0.85rem; }
+
+  section, .secao-produtos { padding: 40px 5%; }
+  h2 { font-size: 1.4rem; margin-bottom: 26px; }
+  h2::after { width: 44px; }
+
+  .card { padding: 20px; }
+  .card > span { font-size: 1.8rem; }
+
+  /* --- Carrossel — 1,5 item --- */
+  .carrossel-wrap { padding: 0 30px; }
+  .grid-produtos { gap: 12px; padding: 10px 0 18px; }
+  .produto-item { flex: 0 0 65%; max-width: 65%; padding: 6px; }
+  .seta { width: 32px; height: 32px; font-size: 1.2rem; }
+  .produto-item h3 { font-size: 0.85rem; }
+  .preco-promocional { font-size: 1.05rem; }
+  .preco-antigo { font-size: 0.72rem; }
+  .parcelamento { font-size: 0.72rem; }
+  .btn-comprar { font-size: 0.78rem; padding: 7px 14px; max-width: 140px; }
+
+  .filtro-btn { padding: 5px 12px; font-size: 0.75rem; }
+
+  .loja-card { padding: 16px; }
+  .loja-card iframe { height: 180px; }
+  .loja-titulo { font-size: 1rem; }
+  .loja-info li { font-size: 0.88rem; }
+
+  .rodape { font-size: 0.85rem; }
+  .rodape-logo { font-size: 1.2rem; }
+}

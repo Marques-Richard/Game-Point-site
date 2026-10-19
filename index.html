@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Point Tubarão | Locação e venda de games</title>
+    <meta
+      name="description"
+      content="Game Point: locadora e loja de games em Tubarão-SC. Consoles, jogos e acessórios com ótimo atendimento."
+    />
+
+    <!-- Evita flash de tema ao carregar -->
+    <script>
+      (function () {
+        try {
+          const tema = localStorage.getItem('gp-tema') || 'claro';
+          document.documentElement.setAttribute('data-tema', tema);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="shortcut icon" href="./src/imagens/logo-fav.png" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="./src/imagens/logo-game-point.jfif" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+  </head>
+  <body>
+    <!-- ============================ TOPO ============================ -->
+    <header class="topo">
+      <a href="#inicio" class="logo" aria-label="Game Point">
+        <img src="./src/imagens/logo-preto.jfif" alt="Game Point" />
+      </a>
+
+      <div class="busca-container">
+        <input
+          type="text"
+          id="busca"
+          placeholder="Buscar console ou jogo..."
+          aria-label="Buscar produtos"
+        />
+        <button type="button" aria-label="Buscar">🔍</button>
+      </div>
+
+      <button class="tema-btn" id="temaBtn" aria-label="Ativar tema escuro">
+        <span class="tema-icone" aria-hidden="true">🌙</span>
+      </button>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      <nav id="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#consoles">Consoles</a>
+        <a href="#jogos">Jogos</a>
+        <a href="#acessorios">Acessórios</a>
+        <a href="#historia">Nossa História</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================ BANNER ============================ -->
+      <section class="banner" aria-label="Destaques da Game Point">
+        <div class="banner-slides">
+          <!-- SLIDE 1 — Fachada / institucional -->
+          <div class="banner-slide ativo">
+            <img src="./src/imagens/banner/banner-frente-loja.jfif" alt="Fachada da Game Point" />
+            <div class="banner-conteudo">
+              <span class="banner-tag">⭐ Desde 1994</span>
+              <h2>Há mais de 30 anos proporcionando diversão</h2>
+              <p>Aqui você encontra tudo para o seu vídeo game — com atendimento de verdade.</p>
+              <a href="#servicos" class="btn sec">Conheça a loja</a>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 — Lançamentos GTA 6 -->
+          <div class="banner-slide" data-destaque="gta6">
+            <img
+              src="./src/imagens/banner/banner-gta6.jfif"
+              alt="Pré-venda GTA 6 na Game Point"
+              onerror="this.src='./src/imagens/placeholder.jpg'"
+            />
+            <div class="banner-conteudo">
+              <span class="banner-tag">🔥 Pré-venda</span>
+              <h2>Garanta já o seu GTA 6</h2>
+              <p>Reserve agora na Game Point e seja um dos primeiros a jogar. Vagas limitadas!</p>
+              <a
+                href="https://wa.me/554836267111?text=Olá!%20Quero%20reservar%20o%20GTA%206"
+                target="_blank"
+                rel="noopener"
+                class="btn"
+                >Reservar agora</a
+              >
+            </div>
+          </div>
+
+          <!-- SLIDE 3 — Duas lojas -->
+          <div class="banner-slide">
+            <img src="./src/imagens/banner/03.jfif" alt="Interior da Game Point" />
+            <div class="banner-conteudo">
+              <span class="banner-tag">📍 Duas lojas em Tubarão</span>
+              <h2>Venha nos visitar</h2>
+              <p>Centro e Oficinas — consoles, jogos, acessórios e aquele atendimento que você já conhece.</p>
+              <a href="#contato" class="btn">Ver endereços</a>
+            </div>
+          </div>
+
+          <!-- SLIDE 4 — Dica -->
+          <div class="banner-slide">
+            <img src="./src/imagens/banner/02.jfif" alt="Dica Game Point" />
+            <div class="banner-conteudo">
+              <span class="banner-tag">💡 Dica</span>
+              <h2>Alugue antes de comprar</h2>
+              <p>Experimente o jogo na locação e só depois decida. Diversão garantida sem arrependimento!</p>
+              <a href="#servicos" class="btn">Saber mais</a>
+            </div>
+          </div>
+
+          <!-- SLIDE 5 — Lançamentos -->
+          <div class="banner-slide">
+            <img src="./src/imagens/banner/01.jfif" alt="Lançamentos Game Point" />
+            <div class="banner-conteudo">
+              <span class="banner-tag">🎮 Lançamentos</span>
+              <h2>Chegaram os lançamentos!</h2>
+              <p>PlayStation 5, Xbox Series, Nintendo Switch 2 e os jogos mais esperados do ano.</p>
+              <a href="#jogos" class="btn">Ver lançamentos</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Setas -->
+        <button class="banner-seta banner-seta-esq" aria-label="Slide anterior">‹</button>
+        <button class="banner-seta banner-seta-dir" aria-label="Próximo slide">›</button>
+
+        <!-- Indicadores -->
+        <div class="banner-indicadores" role="tablist">
+          <button class="banner-dot ativo" data-slide="0" aria-label="Slide 1"></button>
+          <button class="banner-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="banner-dot" data-slide="2" aria-label="Slide 3"></button>
+          <button class="banner-dot" data-slide="3" aria-label="Slide 4"></button>
+          <button class="banner-dot" data-slide="4" aria-label="Slide 5"></button>
+        </div>
+      </section>
+
+      <!-- ============================ HERO ============================ -->
+      <section class="hero" id="inicio">
+        <p class="tag">🎮 Tubarão • SC</p>
+        <h1>
+          Sua diversão começa na
+          <em><span class="game">Game</span> <span class="point">Point</span></em>
+        </h1>
+        <p class="hero-frase">
+          Há mais de 30 anos no mercado, proporcionando muita diversão.<br />
+          Aqui você encontra tudo para o seu vídeo game! 🎮
+        </p>
+        <p>
+          Locação de games, consoles, jogos e acessórios com preço justo e atendimento de verdade.
+        </p>
+        <div class="botoes">
+          <a class="btn" href="#contato">Venha nos visitar</a>
+          <a
+            class="btn sec"
+            href="https://www.instagram.com/game_point_tubarao/"
+            target="_blank"
+            rel="noopener"
+            >Siga no Instagram</a
+          >
+        </div>
+        <div class="nota">⭐ 4,6 no Google · +130 avaliações</div>
+      </section>
+
+      <!-- ============================ SERVIÇOS ============================ -->
+      <section id="servicos">
+        <h2>Nossos serviços</h2>
+        <div class="grid">
+          <article class="card">
+            <span>🕹️</span>
+            <h3>Locação de games</h3>
+            <p>
+              Diversão garantida para você aproveitar seus jogos favoritos. Consulte nosso catálogo
+              de títulos disponíveis, opções de locação e valores diretamente com nossa equipe.
+            </p>
+          </article>
+          <article class="card">
+            <span>🔧</span>
+            <h3>Assistência Técnica</h3>
+            <p>
+              Serviços de manutenção e reparo para consoles PlayStation, Xbox e outros equipamentos.
+              Consulte nossa equipe para verificar os serviços disponíveis.
+            </p>
+          </article>
+          <article class="card">
+            <span>🎧</span>
+            <h3>Consoles e Acessórios</h3>
+            <p>
+              Encontre consoles, controles, jogos e acessórios para elevar sua experiência gamer.
+              Confira nossos produtos e consulte a disponibilidade e os preços em nossas lojas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================ CONSOLES ============================ -->
+      <section id="consoles" class="secao-produtos secao-cinza">
+        <div class="container">
+          <h2>Consoles</h2>
+          <p class="subtitulo">Escolha sua plataforma favorita e confira os modelos disponíveis.</p>
+
+          <div class="filtros-marcas" data-grupo="consoles">
+            <button class="filtro-btn ativo" data-marca="todos">Todos</button>
+            <button class="filtro-btn" data-marca="playstation">PlayStation</button>
+            <button class="filtro-btn" data-marca="xbox">Xbox</button>
+            <button class="filtro-btn" data-marca="nintendo">Nintendo</button>
+          </div>
+
+          <div class="carrossel-wrap">
+            <button class="seta seta-esq" aria-label="Anterior">‹</button>
+            <div class="grid-produtos">
+              <!-- PlayStation -->
+              <article class="produto-item" data-marca="playstation" data-nome="PlayStation 5 1TB">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/playstation-5-Photoroom.png" alt="PlayStation 5 1TB" loading="lazy" />
+                </div>
+                <h3>PlayStation 5 1TB</h3>
+                <p class="preco-antigo">R$ 4.499,00</p>
+                <p class="preco-promocional">R$ 3.899,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 389,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PlayStation%205%201TB">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="playstation" data-nome="PlayStation 4 1TB">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/ps41tr-Photoroom.png" alt="PlayStation 4 1TB" loading="lazy" />
+                </div>
+                <h3>PlayStation 4 1TB</h3>
+                <p class="preco-antigo">R$ 2.199,00</p>
+                <p class="preco-promocional">R$ 1.899,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 189,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PlayStation%204%201TB">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="playstation" data-nome="PlayStation 3">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/ps3-Photoroom.png" alt="PlayStation 3" loading="lazy" />
+                </div>
+                <h3>PlayStation 3</h3>
+                <p class="preco-antigo">R$ 899,00</p>
+                <p class="preco-promocional">R$ 749,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 124,83</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PlayStation%203">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="playstation" data-nome="PlayStation 2 Slim">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/ps2-slim-Photoroom.png" alt="PlayStation 2 Slim" loading="lazy" />
+                </div>
+                <h3>PlayStation 2 Slim</h3>
+                <p class="preco-antigo">R$ 599,00</p>
+                <p class="preco-promocional">R$ 499,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 5x de R$ 99,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PlayStation%202">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="playstation" data-nome="PlayStation 1 Classic Mini">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/PSONE-CLASSIC-MINI-1-Photoroom.png" alt="PS1 Classic Mini" loading="lazy" />
+                </div>
+                <h3>PlayStation 1 Classic Mini</h3>
+                <p class="preco-antigo">R$ 699,00</p>
+                <p class="preco-promocional">R$ 599,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 99,83</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PS1%20Classic%20mini">Comprar</a>
+              </article>
+
+              <!-- Xbox -->
+              <article class="produto-item" data-marca="xbox" data-nome="Xbox Series S 1TB">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/Xbox-Series-S-Photoroom.png" alt="Xbox Series S" loading="lazy" />
+                </div>
+                <h3>Xbox Series S 1TB</h3>
+                <p class="preco-antigo">R$ 3.299,00</p>
+                <p class="preco-promocional">R$ 2.799,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 279,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Xbox%20Series%20S">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="xbox" data-nome="Xbox One 1TB">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/xbobOneX-Photoroom.png" alt="Xbox One 1TB" loading="lazy" />
+                </div>
+                <h3>Xbox One 1TB</h3>
+                <p class="preco-antigo">R$ 1.999,00</p>
+                <p class="preco-promocional">R$ 1.699,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 169,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Xbox%20One%201TB">Comprar</a>
+              </article>
+
+              <!-- Nintendo -->
+              <article class="produto-item" data-marca="nintendo" data-nome="Nintendo Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/Nintendo-Switch-2-Photoroom.png" alt="Nintendo Switch 2" loading="lazy" />
+                </div>
+                <h3>Nintendo Switch 2</h3>
+                <p class="preco-antigo">R$ 4.199,00</p>
+                <p class="preco-promocional">R$ 3.799,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 379,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Nintendo%20Switch%202">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="nintendo" data-nome="Nintendo Switch">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/Nintendo-Switch-Photoroom.png" alt="Nintendo Switch" loading="lazy" />
+                </div>
+                <h3>Nintendo Switch</h3>
+                <p class="preco-antigo">R$ 2.499,00</p>
+                <p class="preco-promocional">R$ 2.099,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 209,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Nintendo%20Switch">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-marca="nintendo" data-nome="SNES Classic Edition">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/consoles/snes-mini-Photoroom.png" alt="SNES Classic Edition" loading="lazy" />
+                </div>
+                <h3>SNES Classic Edition</h3>
+                <p class="preco-antigo">R$ 899,00</p>
+                <p class="preco-promocional">R$ 749,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 124,83</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20SNES%20Classic">Comprar</a>
+              </article>
+            </div>
+            <button class="seta seta-dir" aria-label="Próximo">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ JOGOS ============================ -->
+      <section id="jogos" class="secao-produtos">
+        <div class="container">
+          <h2>Jogos</h2>
+          <p class="subtitulo">Lançamentos e clássicos para todas as plataformas.</p>
+
+          <div class="filtros-marcas" data-grupo="jogos">
+            <button class="filtro-btn ativo" data-plataforma="todos">Todos</button>
+            <button class="filtro-btn" data-plataforma="ps5">PS5</button>
+            <button class="filtro-btn" data-plataforma="ps4">PS4</button>
+            <button class="filtro-btn" data-plataforma="xbox">Xbox</button>
+            <button class="filtro-btn" data-plataforma="switch">Switch</button>
+          </div>
+
+          <div class="carrossel-wrap">
+            <button class="seta seta-esq" aria-label="Anterior">‹</button>
+            <div class="grid-produtos">
+              <!-- PS5 -->
+              <article class="produto-item" data-plataforma="ps5" data-nome="Shadow Labyrinth PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Shadow-Labyrinth-PS5-Photoroom.png" alt="Shadow Labyrinth PS5" loading="lazy" />
+                </div>
+                <h3>Shadow Labyrinth PS5</h3>
+                <p class="preco-antigo">R$ 199,97</p>
+                <p class="preco-promocional">R$ 185,97 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 38,10</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Shadow%20Labyrinth">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Metaphor ReFantazio PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Metaphor-ReFantazio-PS5-Photoroom.png" alt="Metaphor ReFantazio PS5" loading="lazy" />
+                </div>
+                <h3>Metaphor ReFantazio PS5</h3>
+                <p class="preco-antigo">R$ 249,97</p>
+                <p class="preco-promocional">R$ 232,47 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 47,62</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Metaphor%20ReFantazio">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Crimson Desert PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/crimison-desert-Photoroom.png" alt="Crimson Desert PS5" loading="lazy" />
+                </div>
+                <h3>Crimson Desert</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Crimson%20Desert">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="EA Sports FC 27 PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/fifa27-Photoroom.png" alt="EA Sports FC 27 PS5" loading="lazy" />
+                </div>
+                <h3>EA Sports FC 27</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20EA%20Sports%20FC%2027">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Hogwarts Legacy PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Hogwarts-Legacy-Photoroom.png" alt="Hogwarts Legacy PS5" loading="lazy" />
+                </div>
+                <h3>Hogwarts Legacy</h3>
+                <p class="preco-antigo">R$ 279,00</p>
+                <p class="preco-promocional">R$ 249,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 49,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Hogwarts%20Legacy">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Resident Evil 9 PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Resident-Evil-9-Photoroom.png" alt="Resident Evil 9" loading="lazy" />
+                </div>
+                <h3>Resident Evil 9</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Resident%20Evil%209">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Ghost of Yotei PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/ghost-of-yotei-Photoroom.png" alt="Ghost of Yotei" loading="lazy" />
+                </div>
+                <h3>Ghost of Yotei</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Ghost%20of%20Yotei">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Astro Bot PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Astro-Bot-Photoroom.png" alt="Astro Bot" loading="lazy" />
+                </div>
+                <h3>Astro Bot</h3>
+                <p class="preco-antigo">R$ 299,00</p>
+                <p class="preco-promocional">R$ 269,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 53,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Astro%20Bot">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps5" data-nome="Gran Turismo 7 PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps5/Gran-Turismo-7-Photoroom.png" alt="Gran Turismo 7" loading="lazy" />
+                </div>
+                <h3>Gran Turismo 7</h3>
+                <p class="preco-antigo">R$ 299,00</p>
+                <p class="preco-promocional">R$ 269,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 53,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Gran%20Turismo%207">Comprar</a>
+              </article>
+
+              <!-- PS4 -->
+              <article class="produto-item" data-plataforma="ps4" data-nome="Hollow Knight PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/Call-of-Duty-Black-Ops-7-Photoroom.png" alt="Hollow Knight PS4" loading="lazy" />
+                </div>
+                <h3>Hollow Knight PS4</h3>
+                <p class="preco-antigo">R$ 189,97</p>
+                <p class="preco-promocional">R$ 176,67 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 36,19</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Hollow%20Knight%20PS4">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="Red Dead Redemption 2 PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/rdr2-Photoroom.png" alt="Red Dead Redemption 2" loading="lazy" />
+                </div>
+                <h3>Red Dead Redemption 2</h3>
+                <p class="preco-antigo">R$ 249,00</p>
+                <p class="preco-promocional">R$ 219,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 43,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Red%20Dead%202">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="The Last of Us 2 PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/tlou-2-ps4-Photoroom.png" alt="The Last of Us 2" loading="lazy" />
+                </div>
+                <h3>The Last of Us 2</h3>
+                <p class="preco-antigo">R$ 199,00</p>
+                <p class="preco-promocional">R$ 179,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 35,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20The%20Last%20of%20Us%202">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="GTA V PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/gta5-Photoroom.png" alt="GTA V" loading="lazy" />
+                </div>
+                <h3>GTA V</h3>
+                <p class="preco-antigo">R$ 149,00</p>
+                <p class="preco-promocional">R$ 129,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 25,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20GTA%20V">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="Ghost of Tsushima PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/images-Photoroom.png" alt="Ghost of Tsushima" loading="lazy" />
+                </div>
+                <h3>Ghost of Tsushima</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Ghost%20of%20Tsushima">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="Horizon Forbidden West PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/horizon-forbidem-Photoroom.png" alt="Horizon Forbidden West" loading="lazy" />
+                </div>
+                <h3>Horizon Forbidden West</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Horizon%20Forbidden%20West">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="ps4" data-nome="Marvel's Spider-Man PS4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/ps4/sm-ps4.jpg" alt="Marvel's Spider-Man" loading="lazy" />
+                </div>
+                <h3>Marvel's Spider-Man</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Marvel's%20Spider-Man">Comprar</a>
+              </article>
+
+              <!-- Xbox -->
+              <article class="produto-item" data-plataforma="xbox" data-nome="Gears of War E-Day Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Gears-of-War-E-Day_-Photoroom.png" alt="Gears of War E-Day" loading="lazy" />
+                </div>
+                <h3>Gears of War E-Day</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Gears%20of%20War%20E-Day">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Clair Obscur Expedition 33 Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Clair-Obscur-Expedition-33-Photoroom.png" alt="Clair Obscur Expedition 33" loading="lazy" />
+                </div>
+                <h3>Clair Obscur Expedition 33</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Clair%20Obscur%20Expedition%2033">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Dragon Ball Sparking ZERO Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Dragon-Ball-Sparking-ZERO-Photoroom.png" alt="Dragon Ball Sparking ZERO" loading="lazy" />
+                </div>
+                <h3>Dragon Ball: Sparking ZERO</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Dragon%20Ball%20Sparking%20ZERO">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Hades II Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Hades-II-Photoroom.png" alt="Hades II" loading="lazy" />
+                </div>
+                <h3>Hades II</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Hades%20II">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Resident Evil 4 Remake Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Resident-Evil-4-(Remake)-Photoroom.png" alt="Resident Evil 4 (Remake)" loading="lazy" />
+                </div>
+                <h3>Resident Evil 4 (Remake)</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Resident%20Evil%204">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Star Wars Jedi Survivor Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/Star-Wars-Jedi-Survivor-Photoroom.png" alt="Star Wars Jedi Survivor" loading="lazy" />
+                </div>
+                <h3>Star Wars Jedi Survivor</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Star%20Wars%20Jedi%20Survivor">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="xbox" data-nome="Black Myth Wukong Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/xbox-s/XONE-WukongDeluxe-Photoroom.png" alt="Black Myth Wukong" loading="lazy" />
+                </div>
+                <h3>Black Myth: Wukong</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Black%20Myth%20Wukong">Comprar</a>
+              </article>
+
+              <!-- Switch -->
+              <article class="produto-item" data-plataforma="switch" data-nome="Pokemon Pokopia Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/Jogo-Pokemon-Pokopia-Nintendo-Switch-2-Photoroom.png" alt="Pokemon Pokopia" loading="lazy" />
+                </div>
+                <h3>Pokemon Pokopia</h3>
+                <p class="preco-antigo">R$ 349,97</p>
+                <p class="preco-promocional">R$ 325,47 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 66,68</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Pokemon%20Pokopia">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Donkey Kong Bananza Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/Donkey-Kong-Bananza-Photoroom.png" alt="Donkey Kong Bananza" loading="lazy" />
+                </div>
+                <h3>Donkey Kong Bananza</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Donkey%20Kong%20Bananza">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Mario Kart World Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/Mario-Kart-World-Photoroom.png" alt="Mario Kart World" loading="lazy" />
+                </div>
+                <h3>Mario Kart World</h3>
+                <p class="preco-antigo">R$ 399,00</p>
+                <p class="preco-promocional">R$ 369,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 73,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Mario%20Kart%20World">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Zelda Ocarina of Time Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/the-legend-of-zelda-ocarina-of-time-Photoroom.png" alt="Zelda Ocarina of Time" loading="lazy" />
+                </div>
+                <h3>The Legend of Zelda: Ocarina of Time</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Zelda%20Ocarina%20of%20Time">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Dragon Ball Sparking Zero Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/Dragon-Ball-Sparking-Zero--Photoroom.png" alt="Dragon Ball Sparking Zero" loading="lazy" />
+                </div>
+                <h3>Dragon Ball Sparking Zero</h3>
+                <p class="preco-antigo">R$ 349,97</p>
+                <p class="preco-promocional">R$ 325,47 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 66,68</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Dragon%20Ball%20Sparking%20Zero">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Splatoon Raiders Switch 2">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/Splatoon-Raiders-Photoroom.png" alt="Splatoon Raiders" loading="lazy" />
+                </div>
+                <h3>Splatoon Raiders</h3>
+                <p class="preco-antigo">R$ 399,00</p>
+                <p class="preco-promocional">R$ 369,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 73,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Splatoon%20Raiders">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-plataforma="switch" data-nome="Mario Party Switch">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/jogos/Switch-2/mario-party-Photoroom.png" alt="Mario Party" loading="lazy" />
+                </div>
+                <h3>Mario Party</h3>
+                <p class="preco-antigo">R$ 349,00</p>
+                <p class="preco-promocional">R$ 319,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 65,00</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Mario%20Party">Comprar</a>
+              </article>
+            </div>
+            <button class="seta seta-dir" aria-label="Próximo">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ ACESSÓRIOS ============================ -->
+      <section id="acessorios" class="secao-produtos secao-cinza">
+        <div class="container">
+          <h2>Acessórios para Games</h2>
+          <p class="subtitulo">Controles, headsets, cabos e tudo para deixar seu setup completo.</p>
+
+          <div class="carrossel-wrap">
+            <button class="seta seta-esq" aria-label="Anterior">‹</button>
+            <div class="grid-produtos">
+              <article class="produto-item" data-nome="Controle DualShock 4">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/controle-ps4-Photoroom.png" alt="Controle DualShock 4" loading="lazy" />
+                </div>
+                <h3>Controle DualShock 4</h3>
+                <p class="preco-antigo">R$ 299,00</p>
+                <p class="preco-promocional">R$ 269,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 53,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20DualShock%204">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Headset Gamer">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/headset-Photoroom.png" alt="Headset Gamer" loading="lazy" />
+                </div>
+                <h3>Headset Gamer</h3>
+                <p class="preco-antigo">R$ 249,00</p>
+                <p class="preco-promocional">R$ 219,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 43,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Headset%20Gamer">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Controle Xbox">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/controle-xbox-Photoroom.png" alt="Controle Xbox" loading="lazy" />
+                </div>
+                <h3>Controle Xbox</h3>
+                <p class="preco-antigo">R$ 449,00</p>
+                <p class="preco-promocional">R$ 399,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 79,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Controle%20Xbox">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Carregador Controle PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/Carregador-Controle-Ps5-Photoroom.png" alt="Carregador PS5" loading="lazy" />
+                </div>
+                <h3>Carregador Controle PS5</h3>
+                <p class="preco-antigo">R$ 199,00</p>
+                <p class="preco-promocional">R$ 179,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 35,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Carregador%20PS5">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Controle PS5 DualSense">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/controle-gerra-Photoroom.png" alt="Controle PS5" loading="lazy" />
+                </div>
+                <h3>Controle PS5 DualSense</h3>
+                <p class="preco-antigo">R$ 499,00</p>
+                <p class="preco-promocional">R$ 449,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 89,80</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Controle%20PS5">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="DualSense Edge PS5">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/acessorios/controle-ultra-Photoroom.png" alt="DualSense Edge" loading="lazy" />
+                </div>
+                <h3>DualSense Edge PS5</h3>
+                <p class="preco-antigo">R$ 999,00</p>
+                <p class="preco-promocional">R$ 899,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 89,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20DualSense%20Edge">Comprar</a>
+              </article>
+            </div>
+            <button class="seta seta-dir" aria-label="Próximo">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ MAIS PRODUTOS ============================ -->
+      <section id="mais" class="secao-produtos">
+        <div class="container">
+          <h2>Mais Produtos</h2>
+          <p class="subtitulo">Gift cards, cadeiras gamer, periféricos e muito mais.</p>
+
+          <div class="carrossel-wrap">
+            <button class="seta seta-esq" aria-label="Anterior">‹</button>
+            <div class="grid-produtos">
+              <article class="produto-item" data-nome="Gift Card PSN">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/Gift-Card-PSN.jfif-Photoroom.png" alt="Gift Card PSN" loading="lazy" />
+                </div>
+                <h3>Gift Card PSN</h3>
+                <p class="preco-antigo">R$ 250,00</p>
+                <p class="preco-promocional">R$ 229,00 <span>no pix</span></p>
+                <p class="parcelamento">Consulte valores</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20em%20Gift%20Card%20PSN">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Cadeira Gamer Vinik">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/cadeira-gamer-vinik-Photoroom.png" alt="Cadeira Gamer Vinik" loading="lazy" />
+                </div>
+                <h3>Cadeira Gamer Vinik</h3>
+                <p class="preco-antigo">R$ 1.299,00</p>
+                <p class="preco-promocional">R$ 1.149,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 114,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20na%20Cadeira%20Gamer%20Vinik">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Cadeira Gamer Black">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/cadeira-preta-Photoroom.png" alt="Cadeira Gamer Black" loading="lazy" />
+                </div>
+                <h3>Cadeira Gamer Black</h3>
+                <p class="preco-antigo">R$ 1.199,00</p>
+                <p class="preco-promocional">R$ 1.049,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 104,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20na%20Cadeira%20Gamer%20Black">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Mouse Gamer USB">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/mouse-Photoroom.png" alt="Mouse Gamer USB" loading="lazy" />
+                </div>
+                <h3>Mouse Gamer USB</h3>
+                <p class="preco-antigo">R$ 149,00</p>
+                <p class="preco-promocional">R$ 129,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 4x de R$ 32,25</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Mouse%20Gamer">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Cadeira Gamer Red">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/cadeira-red-Photoroom.png" alt="Cadeira Gamer Red" loading="lazy" />
+                </div>
+                <h3>Cadeira Gamer Red</h3>
+                <p class="preco-antigo">R$ 1.199,00</p>
+                <p class="preco-promocional">R$ 1.049,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 10x de R$ 104,90</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20na%20Cadeira%20Gamer%20Red">Comprar</a>
+              </article>
+
+              <article class="produto-item" data-nome="Teclado Gamer Redragon">
+                <div class="img-produto-flutuante">
+                  <img src="./src/imagens/mais/teclado-mecanico-gamer-Photoroom.png" alt="Teclado Redragon" loading="lazy" />
+                </div>
+                <h3>Teclado Gamer Redragon</h3>
+                <p class="preco-antigo">R$ 299,00</p>
+                <p class="preco-promocional">R$ 269,00 <span>no pix</span></p>
+                <p class="parcelamento">ou 6x de R$ 44,83</p>
+                <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Teclado%20Redragon">Comprar</a>
+              </article>
+            </div>
+            <button class="seta seta-dir" aria-label="Próximo">›</button>
+          </div>
+        </div>
+      </section>
+
+      <p class="aviso">Valores sujeitos a alteração. Consulte disponibilidade na loja.</p>
+
+      <!-- ============================ NOSSA HISTÓRIA ============================ -->
+      <section id="historia" class="secao-produtos secao-cinza">
+        <div class="container">
+          <h2>Nossa História</h2>
+          <div class="historia-conteudo">
+            <div class="historia-imagem">
+              <img src="./src/imagens/ddd.webp" alt="Fachada histórica da Game Point" />
+            </div>
+            <div class="historia-texto">
+              <p>
+                Fundada em <strong>1994</strong>, a <strong>Game Point</strong> nasceu da paixão por
+                videogames. Começamos como uma pequena locadora no centro de Tubarão e, ao longo de
+                mais de 30 anos, nos tornamos referência em games e consoles na região.
+              </p>
+              <p>
+                Nosso compromisso sempre foi oferecer diversão de qualidade, com atendimento próximo
+                e preços justos. Hoje, contamos com duas lojas físicas e uma vasta seleção de jogos,
+                consoles e acessórios para todas as plataformas.
+              </p>
+              <p>
+                Mais do que uma loja, somos um ponto de encontro para a comunidade gamer de Tubarão.
+                Venha fazer parte dessa história! 🎮
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ AVALIAÇÕES ============================ -->
+      <section id="avaliacoes">
+        <h2>Quem compra, recomenda.</h2>
+        <div class="grid" id="depoimentos">
+          <blockquote class="card dep">
+            <p>Ótima loja de games e acessórios, ótimos produtos e ótimo atendimento.</p>
+            <cite>Felippe Tessmann</cite>
+          </blockquote>
+          <blockquote class="card dep">
+            <p>Bom desconto e uma variedade de console e jogos!!</p>
+            <cite>Marcos Vinícius Rocha</cite>
+          </blockquote>
+          <blockquote class="card dep">
+            <p>Lugar ótimo pra comprar as bobinhas pros filhos, valores ótimos.</p>
+            <cite>Josiane Cruz de Souza</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ============================ CONTATO ============================ -->
+      <section id="contato" class="escura">
+        <h2>Duas Unidades, A Mesma Paixão por Games</h2>
+        <p class="subtitulo">
+          Estamos prontos para atender você! Visite uma de nossas duas lojas e conheça de perto
+          nossos produtos, serviços e novidades do universo gamer.
+        </p>
+
+        <div class="lojas-grid">
+          <article class="loja-card">
+            <h3 class="loja-titulo">Loja 01 — Centro</h3>
+            <ul class="loja-info">
+              <li>📍 Rua Padre Bernardo Freuser, 265 - 6<br />Centro, Tubarão - SC</li>
+              <li>📞 <a href="tel:+554836267111">(48) 3626-7111</a></li>
+              <li>🕒 <span class="status-loja" data-loja="1">Consulte nosso horário</span></li>
+            </ul>
+            <iframe
+              title="Mapa Game Point - Loja 01"
+              loading="lazy"
+              src="https://www.google.com/maps?q=Rua+Padre+Bernardo+Freuser+265+Tubarão+SC&output=embed"
+            ></iframe>
+            <a
+              class="btn btn-loja"
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com/maps/search/?api=1&query=Game+Point+Rua+Padre+Bernardo+Freuser+265+Tubarão+SC"
+              >Como chegar</a
+            >
+          </article>
+
+          <article class="loja-card">
+            <h3 class="loja-titulo">Loja 02 — Oficinas</h3>
+            <ul class="loja-info">
+              <li>📍 R. Altamiro Guimarães<br />Oficinas, Tubarão - SC</li>
+              <li>📞 <a href="tel:+554836267111">(48) 3626-7111</a></li>
+              <li>🕒 <span class="status-loja" data-loja="2">Consulte nosso horário</span></li>
+            </ul>
+            <iframe
+              title="Mapa Game Point - Loja 02"
+              loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5241.752271312081!2d-49.0237775!3d-28.4892581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521429255504d1f%3A0x6f059faad9d68006!2sGiassi%20Supermercados%20-%20Tubar%C3%A3o%20-%20Oficinas!5e1!3m2!1spt-BR!2sbr!4v1791840777366!5m2!1spt-BR!2sbr"
+            ></iframe>
+            <a
+              class="btn btn-loja"
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com/maps/search/?api=1&query=R.+Altamiro+Guimarães+Tubarão+SC"
+              >Como chegar</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ RODAPÉ ============================ -->
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <div class="rodape-col">
+          <a href="#inicio" class="rodape-logo">
+            <span class="game">GAME</span><span class="point">Point</span>
+          </a>
+          <p class="rodape-frase">
+            Há mais de <strong>30 anos</strong> no mercado, proporcionando muita diversão. Aqui você
+            encontra <strong>tudo para o seu vídeo game</strong>! 🎮
+          </p>
+        </div>
+
+        <div class="rodape-col">
+          <h3>Contato</h3>
+          <ul>
+            <li>📍 Rua Padre Bernardo Freuser, 265 — 6<br />Centro, Tubarão — SC, 88701-140</li>
+            <li>📞 <a href="tel:+554836267111">(48) 3626-7111</a></li>
+            <li>💬 <a href="https://wa.me/554836267111" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div class="rodape-col">
+          <h3>Redes</h3>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/game_point_tubarao/" target="_blank" rel="noopener"
+                >📸 @game_point_tubarao</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Game+Point+Rua+Padre+Bernardo+Freuser+265+Tubarão+SC"
+                target="_blank"
+                rel="noopener"
+                >⭐ Avalie no Google</a
+              >
+            </li>
+            <li><a href="#consoles">🎮 Ver produtos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-base">
+        <p>&copy; <span id="ano">2026</span> Game Point Tubarão &bull; Desenvolvido por Richard Marques</p>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
