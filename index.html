@@ -9,7 +9,6 @@
       content="Game Point: locadora e loja de games em Tubarão-SC. Consoles, jogos e acessórios com ótimo atendimento."
     />
 
-    <!-- Evita flash de tema ao carregar -->
     <script>
       (function () {
         try {
@@ -31,7 +30,6 @@
     <link rel="stylesheet" href="./src/css/responsivo.css" />
   </head>
   <body>
-    <!-- ============================ TOPO ============================ -->
     <header class="topo">
       <a href="#inicio" class="logo" aria-label="Game Point">
         <img src="./src/imagens/logo-preto.jfif" alt="Game Point" />
@@ -63,10 +61,8 @@
     </header>
 
     <main>
-      <!-- ============================ BANNER ============================ -->
       <section class="banner" aria-label="Destaques da Game Point">
         <div class="banner-slides">
-          <!-- SLIDE 1 — Fachada / institucional -->
           <div class="banner-slide ativo">
             <img src="./src/imagens/banner/banner-frente-loja.jfif" alt="Fachada da Game Point" />
             <div class="banner-conteudo">
@@ -77,7 +73,6 @@
             </div>
           </div>
 
-          <!-- SLIDE 2 — Lançamentos GTA 6 -->
           <div class="banner-slide" data-destaque="gta6">
             <img
               src="./src/imagens/banner/banner-gta6.jfif"
@@ -98,7 +93,6 @@
             </div>
           </div>
 
-          <!-- SLIDE 3 — Duas lojas -->
           <div class="banner-slide">
             <img src="./src/imagens/banner/03.jfif" alt="Interior da Game Point" />
             <div class="banner-conteudo">
@@ -109,7 +103,6 @@
             </div>
           </div>
 
-          <!-- SLIDE 4 — Dica -->
           <div class="banner-slide">
             <img src="./src/imagens/banner/02.jfif" alt="Dica Game Point" />
             <div class="banner-conteudo">
@@ -120,7 +113,6 @@
             </div>
           </div>
 
-          <!-- SLIDE 5 — Lançamentos -->
           <div class="banner-slide">
             <img src="./src/imagens/banner/01.jfif" alt="Lançamentos Game Point" />
             <div class="banner-conteudo">
@@ -132,11 +124,9 @@
           </div>
         </div>
 
-        <!-- Setas -->
         <button class="banner-seta banner-seta-esq" aria-label="Slide anterior">‹</button>
         <button class="banner-seta banner-seta-dir" aria-label="Próximo slide">›</button>
 
-        <!-- Indicadores -->
         <div class="banner-indicadores" role="tablist">
           <button class="banner-dot ativo" data-slide="0" aria-label="Slide 1"></button>
           <button class="banner-dot" data-slide="1" aria-label="Slide 2"></button>
@@ -146,8 +136,7 @@
         </div>
       </section>
 
-      <!-- ============================ HERO ============================ -->
-      <section class="hero" id="inicio">
+       <section class="hero" id="inicio">
         <p class="tag">🎮 Tubarão • SC</p>
         <h1>
           Sua diversão começa na
@@ -173,7 +162,6 @@
         <div class="nota">⭐ 4,6 no Google · +130 avaliações</div>
       </section>
 
-      <!-- ============================ SERVIÇOS ============================ -->
       <section id="servicos">
         <h2>Nossos serviços</h2>
         <div class="grid">
@@ -204,7 +192,6 @@
         </div>
       </section>
 
-      <!-- ============================ CONSOLES ============================ -->
       <section id="consoles" class="secao-produtos secao-cinza">
         <div class="container">
           <h2>Consoles</h2>
@@ -220,7 +207,6 @@
           <div class="carrossel-wrap">
             <button class="seta seta-esq" aria-label="Anterior">‹</button>
             <div class="grid-produtos">
-              <!-- PlayStation -->
               <article class="produto-item" data-marca="playstation" data-nome="PlayStation 5 1TB">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/consoles/playstation-5-Photoroom.png" alt="PlayStation 5 1TB" loading="lazy" />
@@ -276,7 +262,6 @@
                 <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20PS1%20Classic%20mini">Comprar</a>
               </article>
 
-              <!-- Xbox -->
               <article class="produto-item" data-marca="xbox" data-nome="Xbox Series S 1TB">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/consoles/Xbox-Series-S-Photoroom.png" alt="Xbox Series S" loading="lazy" />
@@ -299,7 +284,6 @@
                 <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Xbox%20One%201TB">Comprar</a>
               </article>
 
-              <!-- Nintendo -->
               <article class="produto-item" data-marca="nintendo" data-nome="Nintendo Switch 2">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/consoles/Nintendo-Switch-2-Photoroom.png" alt="Nintendo Switch 2" loading="lazy" />
@@ -338,7 +322,6 @@
         </div>
       </section>
 
-      <!-- ============================ JOGOS ============================ -->
       <section id="jogos" class="secao-produtos">
         <div class="container">
           <h2>Jogos</h2>
@@ -355,7 +338,6 @@
           <div class="carrossel-wrap">
             <button class="seta seta-esq" aria-label="Anterior">‹</button>
             <div class="grid-produtos">
-              <!-- PS5 -->
               <article class="produto-item" data-plataforma="ps5" data-nome="Shadow Labyrinth PS5">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/jogos/ps5/Shadow-Labyrinth-PS5-Photoroom.png" alt="Shadow Labyrinth PS5" loading="lazy" />
@@ -455,7 +437,6 @@
                 <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Gran%20Turismo%207">Comprar</a>
               </article>
 
-              <!-- PS4 -->
               <article class="produto-item" data-plataforma="ps4" data-nome="Hollow Knight PS4">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/jogos/ps4/Call-of-Duty-Black-Ops-7-Photoroom.png" alt="Hollow Knight PS4" loading="lazy" />
@@ -533,7 +514,6 @@
                 <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Marvel's%20Spider-Man">Comprar</a>
               </article>
 
-              <!-- Xbox -->
               <article class="produto-item" data-plataforma="xbox" data-nome="Gears of War E-Day Xbox">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/jogos/xbox-s/Gears-of-War-E-Day_-Photoroom.png" alt="Gears of War E-Day" loading="lazy" />
@@ -611,7 +591,6 @@
                 <a class="btn-comprar" target="_blank" rel="noopener" href="https://wa.me/554836267111?text=Olá!%20Tenho%20interesse%20no%20Black%20Myth%20Wukong">Comprar</a>
               </article>
 
-              <!-- Switch -->
               <article class="produto-item" data-plataforma="switch" data-nome="Pokemon Pokopia Switch 2">
                 <div class="img-produto-flutuante">
                   <img src="./src/imagens/jogos/Switch-2/Jogo-Pokemon-Pokopia-Nintendo-Switch-2-Photoroom.png" alt="Pokemon Pokopia" loading="lazy" />
@@ -694,7 +673,6 @@
         </div>
       </section>
 
-      <!-- ============================ ACESSÓRIOS ============================ -->
       <section id="acessorios" class="secao-produtos secao-cinza">
         <div class="container">
           <h2>Acessórios para Games</h2>
@@ -774,7 +752,6 @@
         </div>
       </section>
 
-      <!-- ============================ MAIS PRODUTOS ============================ -->
       <section id="mais" class="secao-produtos">
         <div class="container">
           <h2>Mais Produtos</h2>
@@ -856,7 +833,6 @@
 
       <p class="aviso">Valores sujeitos a alteração. Consulte disponibilidade na loja.</p>
 
-      <!-- ============================ NOSSA HISTÓRIA ============================ -->
       <section id="historia" class="secao-produtos secao-cinza">
         <div class="container">
           <h2>Nossa História</h2>
@@ -884,7 +860,6 @@
         </div>
       </section>
 
-      <!-- ============================ AVALIAÇÕES ============================ -->
       <section id="avaliacoes">
         <h2>Quem compra, recomenda.</h2>
         <div class="grid" id="depoimentos">
@@ -903,7 +878,6 @@
         </div>
       </section>
 
-      <!-- ============================ CONTATO ============================ -->
       <section id="contato" class="escura">
         <h2>Duas Unidades, A Mesma Paixão por Games</h2>
         <p class="subtitulo">
@@ -957,7 +931,6 @@
       </section>
     </main>
 
-    <!-- ============================ RODAPÉ ============================ -->
     <footer class="rodape">
       <div class="rodape-conteudo">
         <div class="rodape-col">
